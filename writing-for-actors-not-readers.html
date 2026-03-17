@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Writing for Actors, Not Readers — Djamel Bennecib</title>
+  <meta name="description" content="Dubbing dialogue has to be speakable under pressure, in a recording booth, on the first take. That constraint changes everything about how you write a line."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg2: #111;
+      --bg3: #161616;
+      --text: #e8e8e8;
+      --text-muted: #777;
+      --text-dim: #555;
+      --red: #c0392b;
+      --red-light: #e74c3c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, serif;
+      line-height: 1.9;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,10,10,0.95);
+      border-bottom: 1px solid #1a1a1a;
+      padding: 1.2rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--text);
+      text-decoration: none;
+    }
+    .nav-back {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--text-muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--red-light); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 12rem 4rem 6rem;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .hero-tag {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.35em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      color: var(--text);
+    }
+    .hero-title em { color: var(--red-light); font-style: italic; }
+    .hero-meta {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.78rem; letter-spacing: 0.12em;
+      color: var(--text-dim); text-transform: uppercase;
+      display: flex; gap: 2rem; align-items: center;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .hero-meta span { color: var(--red); }
+
+    /* ── BODY ── */
+    .article-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 4rem 8rem;
+    }
+
+    .article-body p {
+      font-size: 1.05rem;
+      color: #bbb;
+      line-height: 1.95;
+      margin-bottom: 1.8rem;
+    }
+
+    .article-body p.lead {
+      font-size: 1.2rem;
+      color: var(--text);
+      font-style: italic;
+      border-left: 3px solid var(--red);
+      padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--text);
+      margin: 3.5rem 0 1.5rem;
+      line-height: 1.3;
+    }
+
+    .pull-quote {
+      background: var(--bg3);
+      border-left: 3px solid var(--red);
+      padding: 2rem 2.5rem;
+      margin: 3rem 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text);
+      margin: 0 !important;
+      line-height: 1.6;
+    }
+
+    .divider {
+      width: 60px; height: 2px;
+      background: var(--red);
+      margin: 3rem 0;
+    }
+
+    .linkedin-version {
+      background: var(--bg2);
+      border: 1px solid #1e1e1e;
+      border-left: 3px solid var(--red);
+      padding: 3rem;
+      margin-top: 6rem;
+    }
+    .linkedin-version .label {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 1.5rem;
+    }
+    .linkedin-version p {
+      font-size: 0.95rem;
+      color: #aaa;
+      line-height: 1.85;
+      margin-bottom: 1.2rem;
+    }
+    .linkedin-version p:last-child { margin-bottom: 0; }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero { padding: 8rem 1.5rem 4rem; }
+      .article-body { padding: 3rem 1.5rem 6rem; }
+      .linkedin-version { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Djamel Bennecib</a>
+  <a class="nav-back" href="dialogue-that-travels.html">← Back</a>
+</nav>
+
+<article>
+
+  <div class="hero">
+    <p class="hero-tag">Essay · Performance · Dialogue</p>
+    <h1 class="hero-title">Writing for Actors,<br/><em>Not Readers</em></h1>
+    <div class="hero-meta">
+      <span>Djamel Bennecib</span>
+      <span>·</span>
+      2026
+      <span>·</span>
+      7 min read
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <p class="lead">Dubbing dialogue has to be speakable under pressure, in a recording booth. That constraint changes everything about how you write a line.</p>
+
+    <p>There's a test I apply to every line I write. Not a technical checklist. A physical one. I mute the playback, look at the mouth on screen, and act the line myself — as if I were the one delivering it. If I feel it works, I keep it. I know it's an approximation. What works for me at my desk doesn't guarantee it'll work for an actor in a booth under pressure. But it's the closest I can get to the performance before the performance exists.</p>
+
+    <p>I picture that actor. Standing alone, headphones on, watching a screen. The director's in the booth behind the glass. The clock is running. The session costs money by the hour.</p>
+
+    <p>Does my line work in that moment? Not on the page. In that moment.</p>
+
+    <div class="divider"></div>
+
+    <h2>The Booth Is Not a Library</h2>
+
+    <p>Most people who've never worked in a dubbing studio imagine the recording process as something smooth and collaborative, a creative dialogue between adapter, director, and actor, with room to adjust, experiment, iterate. Sometimes it is. But more often, it's a precision operation running against a very tight schedule. An actor may record thirty, forty, fifty lines in a single session. They're reading words they're seeing for the first time, matching a performance they've watched once, fitting their voice to a mouth that isn't theirs.</p>
+
+    <p>Under those conditions, a difficult line doesn't just slow things down. It creates friction that compounds. The actor stumbles. They go again. The rhythm breaks. Confidence wavers. And the director, who knows the original performance intimately, starts making compromises that were never supposed to happen.</p>
+
+    <p>That friction almost always starts with the adapter. A line that was too long. Too dense. Too full of consonants that cluster at the wrong moment. A sentence that reads beautifully and falls apart the second a human being tries to say it out loud, quickly, with emotion.</p>
+
+    <p>When I'm in the studio and I see an actor struggling with a line, I don't stay quiet. I offer the director an alternative, and the line gets fixed in the room so the session can move forward.</p>
+
+    <div class="divider"></div>
+
+    <h2>What "Speakable" Actually Means</h2>
+
+    <p>Speakability isn't simplicity. A line can be short and still be a mouthful. It can be complex and still flow perfectly. What matters is how the sounds move through the mouth in sequence, and whether that sequence is manageable under pressure.</p>
+
+    <p>The problems I watch for most are specific. Too many similar sounds in close proximity, sibilants stacking up, or plosives arriving too fast for a natural breath to separate them. A sentence that front-loads all its syllables and leaves the actor gasping at the end. A word with three consecutive unstressed syllables where the script calls for intensity. These aren't abstract concerns. They're the difference between a clean take and a session that runs an hour over.</p>
+
+    <p>Rhythm matters as much as vocabulary. I think in beats. Where does this line breathe? Where does the emphasis want to land naturally, without the actor having to force it? A well-written dubbing line almost performs itself. The actor finds the stress intuitively because the words are arranged to guide them there. A badly written one requires effort that shows on screen.</p>
+
+    <p>And then there's the question of speed. The original performance has a tempo. The adapted line has to fit inside it, which means the number of syllables matters, but so does how those syllables are weighted. A line of twelve syllables with four heavy stresses takes longer to deliver than a line of fourteen syllables that moves lightly. I'm always calculating this, even when I'm not aware of doing it. The tools help — working in VoiceQ and Erythmo, I can see at a glance whether a line is running long or whether the rhythm of what I've written is fighting the rhythm on screen.</p>
+
+    <div class="pull-quote">
+      <p>"A well-written dubbing line almost performs itself. The actor finds the stress intuitively because the words are arranged to guide them there."</p>
+    </div>
+
+    <h2>The Actor in the Room</h2>
+
+    <p>Most of the time, I never set foot near a studio. The script goes in, the session happens in Los Angeles or somewhere else entirely, and the finished audio comes back. The adapter and the actor never meet. You write for a voice you'll never hear in person, a performance you'll never witness live.</p>
+
+    <p>But sometimes I'm there. And those sessions changed how I write more than any note I ever received from a studio.</p>
+
+    <p>What you understand immediately, standing in a control room watching a recording session, is that actors aren't passive recipients of your text. They're interpreters, highly skilled, often opinionated, occasionally resistant. A line they find unnatural, they'll flag. A line that doesn't fit their sense of the character, they'll question. And they're usually right. Not always. But often enough that their instincts deserve respect.</p>
+
+    <p>I've worked with actors who could make a mediocre line sound like it was written by someone brilliant. I've also worked with actors whose ego was large enough to fill a room and leave no space for the work. Both types exist. The job's the same regardless: give them language that serves the performance, not language that serves your cleverness on the page.</p>
+
+    <p>The actors who push back hardest are often the ones who care most. That resistance is information. It's telling you something about the line that your read-through at your desk didn't catch. A good adapter listens to it, even when the actor is being difficult, even when the session is running late, even when the director is signaling that it's time to move on.</p>
+
+    <div class="divider"></div>
+
+    <h2>Why Machines Can't Do This</h2>
+
+    <p>I'm asked about AI more often than I used to be. The question is always some version of the same thing: isn't this the kind of work that'll eventually be automated?</p>
+
+    <p>My answer is consistent. No. Not this part.</p>
+
+    <p>AI can generate dialogue. It can match syllable counts. It can produce a line that reads plausibly on a page. What it can't do is understand what happens in a human body when a human being tries to say something. The fatigue in the throat after two hours of recording. The way a particular actor's diction tends to blur certain consonants. The moment in a scene where the emotional temperature requires the line to land on a breath, not fight against it. The difference between a line that an actor can inhabit and a line they're merely reciting.</p>
+
+    <p>This craft exists at the intersection of language and performance. You can't separate them and automate one half while preserving the other. The writing is always, in some fundamental sense, a collaboration with a body that isn't yours, with a voice you may never hear, in a room you may never enter. That collaboration requires judgment. Empathy. Experience. The kind of knowledge that accumulates not from data but from watching things go wrong and understanding why.</p>
+
+    <p>I've adapted over four hundred episodes and films. I still learn from every difficult line. I still rewrite things I thought were finished. The work refines you, but only if you're paying attention to something a machine can't perceive: the person on the other side of the glass, trying to make your words feel like their own.</p>
+
+    <div class="pull-quote">
+      <p>"The writing is always a collaboration with a body that isn't yours, with a voice you may never hear, in a room you may never enter."</p>
+    </div>
+
+  </div>
+
+</article>
+
+</body>
+</html>

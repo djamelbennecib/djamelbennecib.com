@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Script Consulting — Djamel Bennecib</title>
+  <meta name="description" content="Consultation scénario avec Djamel Bennecib — analyse dramaturgique complète basée sur le moteur émotionnel du personnage. Pour scénaristes francophones et internationaux."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #c0392b; --red-light: #e74c3c;
+      --bg: #0d0d0d; --bg2: #111111; --bg3: #161616;
+      --text: #e8e2d9; --muted: #888; --border: #222;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'Syne', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events:none; z-index:1000; opacity:0.4; }
+
+    nav { position:fixed; top:0; left:0; right:0; z-index:100; padding:1.5rem 4rem; display:flex; justify-content:space-between; align-items:center; background:linear-gradient(to bottom, rgba(13,13,13,0.97), transparent); }
+    .nav-name { font-family:'Playfair Display',serif; font-size:1.1rem; letter-spacing:0.05em; color:var(--text); text-decoration:none; }
+    .nav-links { display:flex; gap:2.5rem; list-style:none; }
+    .nav-links a { color:var(--muted); text-decoration:none; font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; transition:color 0.3s; }
+    .nav-links a:hover { color:var(--red-light); }
+
+    .hero { min-height:60vh; display:flex; align-items:flex-end; padding:8rem 4rem 5rem; position:relative; overflow:hidden; border-bottom:1px solid #1a1a1a; }
+    .hero-bg { position:absolute; inset:0; background:linear-gradient(135deg, #0d0d0d 0%, #0a0a0a 40%, #110808 100%); }
+    .hero-line-v { position:absolute; left:4rem; top:0; bottom:0; width:1px; background:linear-gradient(to bottom, transparent, var(--red) 30%, var(--red) 70%, transparent); opacity:0.4; }
+    .hero-glow { position:absolute; top:-100px; right:-100px; width:600px; height:600px; background:radial-gradient(circle, rgba(192,57,43,0.06) 0%, transparent 65%); pointer-events:none; }
+    .hero-inner { position:relative; max-width:1100px; margin:0 auto; width:100%; padding-left:3rem; }
+    .hero-tag { font-size:0.7rem; letter-spacing:0.35em; text-transform:uppercase; color:var(--red); margin-bottom:1.5rem; opacity:0; animation:fadeUp 0.7s ease forwards 0.2s; }
+    .hero-title { font-family:'Playfair Display',serif; font-size:clamp(2.8rem,6vw,5.5rem); line-height:1.05; margin-bottom:1.5rem; opacity:0; animation:fadeUp 0.7s ease forwards 0.35s; }
+    .hero-title em { font-style:italic; color:var(--red-light); }
+    .hero-subtitle { font-size:1.05rem; color:var(--muted); max-width:620px; line-height:1.9; font-style:italic; opacity:0; animation:fadeUp 0.7s ease forwards 0.5s; }
+
+    section { padding:6rem 4rem; }
+    .section-inner { max-width:1100px; margin:0 auto; }
+    .section-label { font-size:0.7rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--red); margin-bottom:1rem; }
+    .section-title { font-family:'Playfair Display',serif; font-size:2.4rem; margin-bottom:1.5rem; line-height:1.2; }
+    .divider { width:60px; height:2px; background:var(--red); margin-bottom:3rem; }
+
+    .intro { background:var(--bg2); }
+    .intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start; }
+    .intro-text p { color:#999; font-size:0.95rem; line-height:1.9; margin-bottom:1.2rem; }
+    .intro-text p strong { color:var(--text); }
+    .intro-quote { background:var(--bg3); border-left:3px solid var(--red); padding:2.5rem; }
+    .intro-quote p { font-family:'Playfair Display',serif; font-size:1.1rem; font-style:italic; color:var(--text); line-height:1.7; margin-bottom:1.5rem; }
+    .intro-quote span { font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); }
+
+    .deliverables { background:var(--bg); }
+    .deliverables-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-bottom:4rem; }
+    .deliverable-card { background:var(--bg2); border:1px solid var(--border); padding:2rem; transition:border-color 0.3s; }
+    .deliverable-card:hover { border-color:var(--red); }
+    .deliverable-number { font-family:'Playfair Display',serif; font-size:2.5rem; color:var(--red); opacity:0.4; line-height:1; margin-bottom:1rem; }
+    .deliverable-title { font-family:'Playfair Display',serif; font-size:1.1rem; margin-bottom:0.8rem; color:var(--text); }
+    .deliverable-desc { color:#666; font-size:0.88rem; line-height:1.8; }
+
+    .pricing { background:var(--bg2); }
+    .pricing-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:2rem; }
+    .pricing-card { background:var(--bg3); border:1px solid var(--border); overflow:hidden; }
+    .pricing-card-top { background:var(--red); padding:1.5rem 2rem; }
+    .pricing-card-top.dark { background:#1a0a0a; border-bottom:2px solid var(--red); }
+    .pricing-card-label { font-size:0.7rem; letter-spacing:0.25em; text-transform:uppercase; color:rgba(255,255,255,0.7); margin-bottom:0.4rem; }
+    .pricing-card-top.dark .pricing-card-label { color:var(--red); }
+    .pricing-card-title { font-family:'Playfair Display',serif; font-size:1.6rem; color:#fff; }
+    .pricing-card-top.dark .pricing-card-title { color:var(--text); }
+    .pricing-card-body { padding:2rem; }
+    .pricing-card-desc { color:#777; font-size:0.9rem; line-height:1.8; margin-bottom:1.5rem; }
+    .pricing-list { list-style:none; padding:0; color:#666; font-size:0.88rem; line-height:2; margin-bottom:2rem; }
+    .pricing-list li { border-bottom:1px solid #1e1e1e; padding:0.4rem 0; }
+    .pricing-list li:last-child { border-bottom:none; }
+    .pricing-amount { background:var(--bg); padding:1.5rem; }
+    .pricing-amount-label { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:#555; margin-bottom:0.8rem; }
+    .pricing-amount-value { color:var(--red); font-weight:700; font-size:1.4rem; font-family:'Playfair Display',serif; }
+    .pricing-amount-detail { color:#555; font-size:0.8rem; margin-top:0.3rem; }
+
+    .method { background:var(--bg); }
+    .method-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin-bottom:3rem; }
+    .method-step { background:var(--bg2); padding:2rem; }
+    .method-step-num { font-family:'Playfair Display',serif; font-size:2rem; color:var(--red); opacity:0.5; line-height:1; margin-bottom:1rem; }
+    .method-step-title { font-size:0.85rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--text); margin-bottom:0.8rem; }
+    .method-step-desc { color:#666; font-size:0.85rem; line-height:1.7; }
+
+    .cta-section { text-align:center; padding:6rem 4rem; background:var(--bg2); border-top:1px solid #1a1a1a; }
+    .cta-section p { color:#666; font-size:0.9rem; margin-bottom:2rem; }
+    .btn { display:inline-block; padding:0.75rem 1.8rem; font-size:0.78rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:600; text-decoration:none; transition:all 0.3s; }
+    .btn-red { background:var(--red); color:#fff; }
+    .btn-red:hover { background:var(--red-light); transform:translateY(-2px); }
+    .btn-outline { border:1px solid #333; color:var(--muted); margin-left:1rem; }
+    .btn-outline:hover { border-color:var(--red); color:var(--red); }
+
+    footer { padding:2rem 4rem; background:var(--bg); border-top:1px solid #161616; display:flex; justify-content:space-between; align-items:center; }
+    footer p { color:#444; font-size:0.78rem; letter-spacing:0.1em; }
+    footer a { color:#444; text-decoration:none; transition:color 0.3s; }
+    footer a:hover { color:var(--red); }
+
+    @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+
+    @media (max-width: 768px) {
+      nav { padding:1.2rem 1.5rem; }
+      nav .nav-links { display:none; }
+      .hero { padding:7rem 1.5rem 4rem; }
+      .hero-inner { padding-left:0; }
+      .hero-line-v { display:none; }
+      section { padding:4rem 1.5rem; }
+      .intro-grid { grid-template-columns:1fr; gap:3rem; }
+      .deliverables-grid { grid-template-columns:1fr; }
+      .pricing-grid { grid-template-columns:1fr; }
+      .method-steps { grid-template-columns:1fr 1fr; }
+      footer { flex-direction:column; gap:1rem; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-name">Djamel Bennecib</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="dialogue-that-travels.html">Dubbing</a></li>
+      <li><a href="index.html#translation">Translation</a></li>
+      <li><a href="index.html#masterclass">Masterclass</a></li>
+      <li><a href="index.html#books">Books</a></li>
+      <li><a href="index.html#film">Film</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-line-v"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <p class="hero-tag">Consulting · Scénario · FR / EN</p>
+      <h1 class="hero-title">Script<br><em>Consulting</em></h1>
+      <p class="hero-subtitle">La plupart des scénarios ne bloquent pas à cause de l'intrigue. Ils bloquent à cause du personnage.<br><span style="font-size:0.88rem;opacity:0.55;">Most screenplays don't stall because of plot. They stall because of character.</span></p>
+    </div>
+  </div>
+
+  <section class="intro">
+    <div class="section-inner">
+      <div class="intro-grid">
+        <div class="intro-text">
+          <p class="section-label">Approche · Approach</p>
+          <h2 class="section-title">Le moteur émotionnel<br><em style="font-style:italic;color:var(--red-light);">de ton histoire</em></h2>
+          <div class="divider"></div>
+          <p>Tu veux comprendre pourquoi ton scénario ne fonctionne pas — et comment le corriger concrètement. <strong>Je propose une analyse complète basée sur le moteur émotionnel du personnage</strong> — la "blessure" — au cœur de la structure et des personnages.</p>
+          <p>Cette méthode est celle que j'enseigne depuis des années et que j'ai formalisée dans <em>Le Scénario de la Blessure</em> : Blessure → Croyance → Défaut → Choix → Transformation. Elle s'applique aussi bien aux projets français qu'internationaux.</p>
+          <p style="color:#555;font-size:0.88rem;font-style:italic;">You want to understand why your screenplay isn't working — and how to fix it concretely. I offer a complete analysis based on the character's emotional engine, at the core of structure and character work.</p>
+        </div>
+        <div>
+          <div class="intro-quote">
+            <p>"Un scénario qui ne fonctionne pas, c'est presque toujours un personnage dont on ne comprend pas pourquoi il fait ce qu'il fait. Pas un problème de structure. Un problème de moteur."</p>
+            <span>— Djamel Bennecib, Le Scénario de la Blessure</span>
+          </div>
+          <div style="margin-top:2rem;background:var(--bg3);border:1px solid var(--border);padding:2rem;">
+            <p style="font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);margin-bottom:1.2rem;">La méthode · The method</p>
+            <div style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--red);text-align:center;letter-spacing:0.05em;line-height:2.2;">
+              Blessure → Croyance → Défaut<br>→ Choix → Transformation
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="deliverables">
+    <div class="section-inner">
+      <p class="section-label">Ce que tu reçois · What you get</p>
+      <h2 class="section-title">Une analyse complète,<br><em style="font-style:italic;color:var(--red-light);">pas des généralités</em></h2>
+      <div class="divider"></div>
+      <div class="deliverables-grid">
+        <div class="deliverable-card">
+          <div class="deliverable-number">01</div>
+          <h3 class="deliverable-title">Analyse dramaturgique approfondie</h3>
+          <p class="deliverable-desc">Lecture complète avec identification précise des blocages : blessure du personnage, cohérence de l'arc, logique des choix dramatiques. / Complete reading with precise identification of what's blocking the story.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-number">02</div>
+          <h3 class="deliverable-title">Fiche de lecture écrite détaillée</h3>
+          <p class="deliverable-desc">Un document structuré : points forts, blocages identifiés, axes de réécriture concrets. Pas des impressions — des pistes actionnables. / A structured document: strengths, identified issues, concrete rewrite directions.</p>
+        </div>
+        <div class="deliverable-card">
+          <div class="deliverable-number">03</div>
+          <h3 class="deliverable-title">Regard orienté marché</h3>
+          <p class="deliverable-desc">Un œil professionnel sur la viabilité de ton projet — France et international. Structure, personnages, dialogues : ce qui fonctionne, ce qui freine. / A professional eye on your project's viability — France and international market.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <div class="section-inner">
+      <p class="section-label">Format · Tarifs · Rates</p>
+      <h2 class="section-title">Deux formules,<br><em style="font-style:italic;color:var(--red-light);">selon ton projet</em></h2>
+      <div class="divider"></div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-card-top">
+            <p class="pricing-card-label">Format de base · Base format</p>
+            <h3 class="pricing-card-title">Analyse écrite</h3>
+          </div>
+          <div class="pricing-card-body">
+            <p class="pricing-card-desc">La formule complète par défaut. Tu reçois une fiche de lecture détaillée couvrant l'ensemble de ton scénario — structure, personnages, dialogues, marché.</p>
+            <ul class="pricing-list">
+              <li>— Lecture complète du scénario</li>
+              <li>— Analyse de la blessure et de l'arc du personnage</li>
+              <li>— Points forts et blocages identifiés</li>
+              <li>— Axes de réécriture concrets</li>
+              <li>— Livraison par écrit sous 7 à 10 jours</li>
+            </ul>
+            <div class="pricing-amount">
+              <p class="pricing-amount-label">Tarif · Rate</p>
+              <p class="pricing-amount-value">180 € – 250 €</p>
+              <p class="pricing-amount-detail">Selon longueur et complexité · Depending on length and complexity</p>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-card-top dark">
+            <p class="pricing-card-label">Option complémentaire · Add-on</p>
+            <h3 class="pricing-card-title">Session visio</h3>
+          </div>
+          <div class="pricing-card-body">
+            <p class="pricing-card-desc">Une heure en direct pour approfondir l'analyse, répondre à tes questions et travailler ensemble sur les axes de réécriture. En complément de l'analyse écrite.</p>
+            <ul class="pricing-list">
+              <li>— 1h en visioconférence (Zoom)</li>
+              <li>— Échange direct sur les blocages identifiés</li>
+              <li>— Questions / réponses sur ta structure</li>
+              <li>— Pistes de travail personnalisées</li>
+              <li>— À planifier après livraison de la fiche</li>
+            </ul>
+            <div class="pricing-amount">
+              <p class="pricing-amount-label">Tarif · Rate</p>
+              <p class="pricing-amount-value">100 €</p>
+              <p class="pricing-amount-detail">En complément de l'analyse écrite · As an add-on</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:var(--bg3);border:1px solid var(--border);padding:2.5rem;">
+        <p style="font-size:0.7rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);margin-bottom:1.5rem;">Informations pratiques · Practical info</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;">
+          <div>
+            <p style="color:#555;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Langue · Language</p>
+            <p style="color:var(--text);font-size:0.95rem;">Français · English<br><span style="color:#666;font-size:0.85rem;">Both available</span></p>
+          </div>
+          <div>
+            <p style="color:#555;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Format</p>
+            <p style="color:var(--text);font-size:0.95rem;">Long / court métrage<br><span style="color:#666;font-size:0.85rem;">Feature / short film</span></p>
+          </div>
+          <div>
+            <p style="color:#555;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Délai · Turnaround</p>
+            <p style="color:var(--text);font-size:0.95rem;">7 à 10 jours<br><span style="color:#666;font-size:0.85rem;">7 to 10 days</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="method">
+    <div class="section-inner">
+      <p class="section-label">Pourquoi cette approche · Why this approach</p>
+      <h2 class="section-title">Une méthode issue<br><em style="font-style:italic;color:var(--red-light);">du terrain</em></h2>
+      <div class="divider"></div>
+      <div class="method-steps">
+        <div class="method-step">
+          <div class="method-step-num">01</div>
+          <p class="method-step-title">La blessure</p>
+          <p class="method-step-desc">Identifier la blessure originelle du personnage — ce qui motive chacun de ses choix sans qu'il en soit conscient.</p>
+        </div>
+        <div class="method-step">
+          <div class="method-step-num">02</div>
+          <p class="method-step-title">La croyance</p>
+          <p class="method-step-desc">Comprendre la croyance limitante qui découle de cette blessure — et comment elle génère le défaut du personnage.</p>
+        </div>
+        <div class="method-step">
+          <div class="method-step-num">03</div>
+          <p class="method-step-title">Le choix</p>
+          <p class="method-step-desc">Chaque tournant dramatique pose la même question : le personnage va-t-il affronter sa blessure ou la fuir encore ?</p>
+        </div>
+        <div class="method-step">
+          <div class="method-step-num">04</div>
+          <p class="method-step-title">La transformation</p>
+          <p class="method-step-desc">L'arc dramatique ne se construit pas de l'extérieur. Il émerge de l'intérieur — ou il ne convainc pas.</p>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <a href="https://www.amazon.fr/dp/B0GSF7YNLV" target="_blank" style="color:var(--red);text-decoration:none;font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;">Lire <em>Le Scénario de la Blessure</em> →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-section" id="contact">
+    <p class="section-label" style="text-align:center;margin-bottom:1rem;">Travailler ensemble · Work Together</p>
+    <h2 style="font-family:'Playfair Display',serif;font-size:2rem;text-align:center;margin-bottom:1.5rem;">Parlons de ton projet.</h2>
+    <p>Décris-moi ton projet en quelques lignes — je te reviens rapidement.<br><span style="font-size:0.85rem;opacity:0.6;">Tell me about your project in a few lines — I'll get back to you shortly.</span></p>
+    <div style="margin-top:2rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:contact@djamelbennecib.com" class="btn btn-red">Envoyer un message →</a>
+      <a href="index.html" class="btn btn-outline">← Retour au site</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Djamel Bennecib</p>
+    <p><a href="index.html">djamelbennecib.com</a></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why Korean and Turkish Break Dubbing — Djamel Bennecib</title>
+  <meta name="description" content="Korean and Turkish don't just translate differently into English. They think differently. After years of adapting both, here's what I've learned about making them work on screen."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg2: #111;
+      --bg3: #161616;
+      --text: #e8e8e8;
+      --text-muted: #777;
+      --text-dim: #555;
+      --red: #c0392b;
+      --red-light: #e74c3c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, serif;
+      line-height: 1.9;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,10,10,0.95);
+      border-bottom: 1px solid #1a1a1a;
+      padding: 1.2rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--text);
+      text-decoration: none;
+    }
+    .nav-back {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--text-muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--red-light); }
+
+    .hero {
+      padding: 12rem 4rem 6rem;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .hero-tag {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.35em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 1.5rem;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      color: var(--text);
+    }
+    .hero-title em { color: var(--red-light); font-style: italic; }
+    .hero-meta {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.78rem; letter-spacing: 0.12em;
+      color: var(--text-dim); text-transform: uppercase;
+      display: flex; gap: 2rem; align-items: center;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid #1e1e1e;
+    }
+    .hero-meta span { color: var(--red); }
+
+    .article-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 4rem 8rem;
+    }
+
+    .article-body p {
+      font-size: 1.05rem;
+      color: #bbb;
+      line-height: 1.95;
+      margin-bottom: 1.8rem;
+    }
+
+    .article-body p.lead {
+      font-size: 1.2rem;
+      color: var(--text);
+      font-style: italic;
+      border-left: 3px solid var(--red);
+      padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--text);
+      margin: 3.5rem 0 1.5rem;
+      line-height: 1.3;
+    }
+
+    .pull-quote {
+      background: var(--bg3);
+      border-left: 3px solid var(--red);
+      padding: 2rem 2.5rem;
+      margin: 3rem 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--text);
+      margin: 0 !important;
+      line-height: 1.6;
+    }
+
+    .divider {
+      width: 60px; height: 2px;
+      background: var(--red);
+      margin: 3rem 0;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero { padding: 8rem 1.5rem 4rem; }
+      .article-body { padding: 3rem 1.5rem 6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Djamel Bennecib</a>
+  <a class="nav-back" href="dialogue-that-travels.html">← Back</a>
+</nav>
+
+<article>
+
+  <div class="hero">
+    <p class="hero-tag">Essay · Craft · Languages</p>
+    <h1 class="hero-title">Why Korean and Turkish<br/><em>Break Dubbing</em></h1>
+    <div class="hero-meta">
+      <span>Djamel Bennecib</span>
+      <span>·</span>
+      2026
+      <span>·</span>
+      8 min read
+    </div>
+  </div>
+
+  <div class="article-body">
+
+    <p class="lead">Korean and Turkish don't just translate differently into English. They think differently. After years of adapting both for major streaming platforms, here's what I've learned about making them work on screen.</p>
+
+    <p>Most people think dubbing is a linguistic problem. You take a sentence in one language and find its equivalent in another. The words change. The meaning stays. Job done.</p>
+
+    <p>That model works reasonably well for languages that share a grammatical family with English — French, Spanish, Italian. The architecture is similar enough that the journey from source to target is navigable without too many structural surprises.</p>
+
+    <p>Korean and Turkish are a different conversation entirely. Both languages are built on fundamentally different logic. They don't just use different words. They structure thought differently, distribute emphasis differently, and place the weight of a sentence in places that have no natural equivalent in English. Adapting them isn't translation.
+
+    It's reconstruction.</p>
+
+    <div class="divider"></div>
+
+    <h2>Korean: When the Sentence Arrives Backwards</h2>
+
+    <p>The first thing you notice adapting from Korean is that the verb comes last. In English, the verb is the engine of a sentence — it arrives early, it drives everything forward. In Korean, the verb is the destination. Everything builds toward it. Subject, object, modifiers — all of it accumulates before the meaning lands.</p>
+
+    <p>For an adapter working with lip-sync, this creates an immediate problem. The actor on screen is already moving, already expressing something, already committing to an emotional beat — and you're still waiting for the Korean sentence to tell you what it means. The solution isn't to translate word by word. It's to watch the entire scene before writing a single line. Understand where the sentence is going before you write where it starts.</p>
+
+    <p>With Turkish I do the same. You read the entire line, absorb its structure, then reconstruct it in English from scratch. Not adapted word by word — rebuilt, in the right order, for an English-speaking mouth.</p>
+
+    <div class="divider"></div>
+
+    <h2>Korean: The Honorifics Problem</h2>
+
+    <p>Korean has a system of speech levels that English simply doesn't have. The same sentence can be spoken in formal register, informal register, or several gradations in between, and the choice carries enormous social and emotional weight. Who is speaking to whom, what their relationship is, whether there's respect or tension or intimacy — all of that is encoded in the verb ending. It's not subtext. It's text.</p>
+
+    <p>English has none of this. We have "you" for everyone — the boss, the parent, the stranger, the enemy. We have "sir" and "ma'am," which carry some of the weight but land differently, more formally, more American. We have names and titles. We have tone. But we don't have the same grammatical infrastructure.</p>
+
+    <p>Then there are words like <em>unni</em> — an address term used by a younger woman to an older woman she's close to, somewhere between "sister" and a term of endearment. It carries warmth, familiarity, a specific kind of female solidarity that has no direct English equivalent. You can't translate it. You can only find what it does emotionally in the scene and make the English line do that same work in a different way.</p>
+
+    <p>This is what adaptation means at its deepest level.</p>
+
+    <p><strong style="color:var(--text);font-style:normal;">Not finding the word. Finding the function.</strong></p>
+
+    <div class="divider"></div>
+
+    <h2>Korean: Pauses That Don't Land the Same Way</h2>
+
+    <p>Korean dialogue breathes differently. A sentence that would flow continuously in English may pause in Korean at a point that makes no sense to an English-speaking ear. The actor on screen stops. There's a beat. Then the sentence continues — but the pause has fallen in a place where English doesn't naturally rest.</p>
+
+    <p>Something like: "You need to be" — long pause — "careful about your things." In English, cutting after "be" creates an unresolved hanging that sounds unnatural, almost broken. The listener expects the verb to complete. Stopping there creates discomfort rather than dramatic tension.</p>
+
+    <p>The solution isn't to force the English into the same pause point. It's to find where English would naturally pause and restructure around that. Sometimes it means splitting the thought differently. Sometimes it means repeating a word across the pause to bridge it: "You need to — you need to watch your things." The pause is preserved. The English survives. The lip-sync holds.</p>
+
+    <p>This is micro-level work. A single line can require fifteen minutes of problem-solving. You're not translating anymore. You're operating on a sentence while it's still breathing.</p>
+
+    <div class="pull-quote">
+      <p>"You're not translating anymore. You're operating on a sentence while it's still breathing."</p>
+    </div>
+
+    <h2>Turkish: The Language That Keeps You Waiting</h2>
+
+    <p>Turkish shares the verb-final structure with Korean, but the adaptation challenges it creates feel different in practice. Turkish sentences tend to be long, complex, layered — built with suffixes that accumulate meaning the way English would use separate words or clauses. By the time you reach the end of a Turkish sentence, you've traveled a significant distance from where you started.</p>
+
+    <p>What this means for the adapter is that you cannot process a Turkish line the way you might process a French or Spanish line. You can't start writing the English equivalent at the same time as you're reading the source. You have to finish reading first. Then you turn around and write the whole thing, in the right English order, from a starting point that the Turkish source only arrived at last.</p>
+
+    <p>It requires a different rhythm. Slower intake. Faster output. A willingness to hold the whole sentence in your head before committing anything to the page.</p>
+
+    <div class="divider"></div>
+
+    <h2>The Length Paradox</h2>
+
+    <p>There's a paradox that anyone who's worked with Korean or Turkish will recognize. Both languages can be remarkably compressed. Three Korean words can carry a weight of meaning that takes a full English sentence to unpack. A single Turkish suffix can do what English needs an entire clause to express. In those moments, the adapter's job is to expand — to find the English equivalent that fills the necessary screen time without padding, without losing the original's precision.</p>
+
+    <p>But the opposite is also true. Sometimes a Korean or Turkish line runs long, building through its structure to a conclusion that English would reach in half the syllables. Now the adapter has too much space, not too little. You have to fill a mouth that's moving for longer than your English version needs.</p>
+
+    <p>Both problems are real. Both appear in the same project, sometimes in consecutive lines. The adapter has to be comfortable working in both directions simultaneously — compressing meaning, expanding meaning — without losing the thread of the scene.</p>
+
+    <div class="divider"></div>
+
+    <h2>What These Languages Teach You</h2>
+
+    <p>Working extensively with Korean and Turkish has changed how I approach adaptation from any language. It forced me to stop thinking of dubbing as word replacement and start thinking of it as structural reconstruction. It taught me to read a scene before reading a line. It taught me that the pause, the breath, the moment of silence inside a sentence is as much a part of the dialogue as the words themselves.</p>
+
+    <p>It also taught me humility in the face of cultural specificity. Some things don't travel. Honorifics, kinship terms, registers of formality — these aren't translation problems. They're windows into how a culture organizes its relationships. The adapter's job isn't to eliminate that specificity. It's to find what it does in the story and make the English do the same thing, by whatever means the language allows.</p>
+
+    <p>The craft, at its best, is invisible. The audience watching a Korean thriller dubbed into English shouldn't be thinking about any of this. They should simply believe. But underneath that belief is hundreds of small decisions — structural, rhythmic, cultural, performative — made by someone working alone, with headphones on, trying to make a sentence land in a language it was never written for.</p>
+
+    <p>That's the job. All of it.</p>
+
+  </div>
+
+</article>
+
+</body>
+</html>

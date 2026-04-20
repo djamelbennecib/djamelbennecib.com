@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why Translate Your Screenplay into English — Djamel Bennecib</title>
+  <meta name="description" content="English isn't just the dominant language of cinema. It's the industry's operating system. If your script isn't in English, it isn't really in the room."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg2: #111;
+      --bg3: #161616;
+      --text: #e8e8e8;
+      --text-muted: #777;
+      --text-dim: #555;
+      --red: #c0392b;
+      --red-light: #e74c3c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, serif;
+      line-height: 1.9;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,10,10,0.95);
+      border-bottom: 1px solid #1a1a1a;
+      padding: 1.2rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--text);
+      text-decoration: none;
+    }
+    .nav-back {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--text-muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--red-light); }
+
+    .hero {
+      padding: 12rem 4rem 6rem;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .hero-tag {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.35em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 2rem; display: block;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    .hero-meta {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--text-dim);
+    }
+    .lang-switch {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-decoration: none;
+      border-bottom: 1px solid #333;
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .lang-switch:hover { color: var(--red-light); border-color: var(--red-light); }
+
+    .divider {
+      max-width: 780px; margin: 0 auto;
+      padding: 0 4rem;
+      border-top: 1px solid #1e1e1e;
+    }
+
+    .body-text {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 4rem 8rem;
+    }
+    .body-text p {
+      font-size: 1.08rem;
+      color: #ccc;
+      margin-bottom: 1.8rem;
+    }
+    .body-text p:first-child {
+      font-size: 1.2rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .body-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-style: italic;
+      color: #fff;
+      margin: 3.5rem 0 1.5rem;
+    }
+    .pull-quote {
+      border-left: 2px solid var(--red);
+      padding: 0.5rem 0 0.5rem 2rem;
+      margin: 3rem 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem !important;
+      font-style: italic;
+      color: #e0e0e0 !important;
+      line-height: 1.7;
+      margin: 0 !important;
+    }
+
+    footer {
+      border-top: 1px solid #1a1a1a;
+      padding: 3rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 780px; margin: 0 auto;
+    }
+    footer p {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--text-dim);
+    }
+    footer a {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--red);
+      text-decoration: none; transition: color 0.2s;
+    }
+    footer a:hover { color: var(--red-light); }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero { padding: 9rem 1.5rem 4rem; }
+      .body-text { padding: 3rem 1.5rem 6rem; }
+      .divider { padding: 0 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Djamel Bennecib</a>
+    <a href="index.html#essays" class="nav-back">← All Essays</a>
+  </nav>
+
+  <section class="hero">
+    <span class="hero-tag">Script Translation</span>
+    <h1>Why Translate Your Screenplay into English</h1>
+    <p class="hero-meta">By Djamel Bennecib &nbsp;/&nbsp; 2026</p>
+    <a href="pourquoi-traduire-son-scenario-en-anglais.html" class="lang-switch">Lire en français →</a>
+  </section>
+
+  <div class="divider"></div>
+
+  <article class="body-text">
+
+    <p>English isn't just the dominant language of cinema. It's the industry's operating system. If your script isn't in English, it isn't really in the room.</p>
+
+    <p>That sounds blunt. But it's how the market works. Producers, sales agents, festival programmers, co-production partners — most of them read in English. Some of them only read in English. When they receive a script in French, Spanish, or Korean, the first thing they do is reach for a coverage report. And a coverage report is not your screenplay. It's a summary. It's a filter. And filters cut things out.</p>
+
+    <p>So the question isn't whether to translate. The question is what you lose if you don't.</p>
+
+    <h2>The pitch happens before the meeting</h2>
+
+    <p>Most international co-productions start not with a phone call, but with a read. Someone at a market — Cannes, AFM, Berlin — picks up a script. They sit with it on a plane or in a hotel room at midnight. If it's in a language they can't read fluently, they don't sit with it at all. They pass it to an assistant, or they put it back.</p>
+
+    <p>The pitch happens when someone reads your first ten pages alone, at their own pace, with no one around to explain context or tone. If those ten pages aren't in a language they can absorb completely, you've already lost the room. Not because your story isn't strong. Because the friction was too high.</p>
+
+    <p>An English translation removes that friction. It puts your script on equal footing with every other script in the pile.</p>
+
+    <h2>Translation is not transcription</h2>
+
+    <p>This is where most writers get it wrong. They assume translation is a technical task — that you give the script to someone fluent in both languages and you get back the same story in different words. That's not what happens. That's not even close to what happens.</p>
+
+    <p>A screenplay is not a novel. It's a performance document. Every line is written to be spoken, every scene written to be filmed. That means a translator can't just be bilingual. They have to understand how English-language screenplays actually sound — the rhythm of dialogue, the compression of action lines, the specific way American English handles subtext. A technically accurate translation can read as completely flat on the page. Flat enough to kill a real project.</p>
+
+    <div class="pull-quote">
+      <p>The goal isn't English words. The goal is English momentum.</p>
+    </div>
+
+    <p>What you need is someone who can make the script feel like it was written in English from the start. Not adapted, not translated. Written. That requires two things: deep command of both languages, and a screenwriter's ear for how dialogue lives on the page.</p>
+
+    <h2>Your voice has to survive the crossing</h2>
+
+    <p>Here's what gets lost in a bad translation: specificity. The things that make your script yours. The particular way a character talks. The rhythm of a scene that's doing three things at once. The texture of a world that doesn't translate literally because it doesn't need to — it just needs to land.</p>
+
+    <p>A French writer I worked with had a character who spoke in a way that was clipped, almost bureaucratic, even in intimate scenes. It was a deliberate choice that said everything about who this person was. A word-for-word translation turned it into awkwardness. An adaptation that understood the intention turned it into something an American actor could play immediately.</p>
+
+    <p>The voice survived the crossing. That's what translation is supposed to do.</p>
+
+    <h2>Festivals read differently than producers</h2>
+
+    <p>There's a practical distinction worth making. If you're targeting European co-production funds or sending to festivals in your own language territory, a translation may not be the priority. Many of those readers are multilingual, and context helps.</p>
+
+    <p>But if you're submitting to competitions like the Nicholl, pitching at an American market, approaching an international sales agent, or trying to reach a production company in the UK, Australia, or the US — an English script isn't optional. It's the entry condition. Some competitions simply won't accept a submission in any other language. Some sales agents won't pass your script along internally unless it's already in English. The infrastructure runs on English.</p>
+
+    <p>Knowing which doors require it and which don't is part of having a strategy. But for most writers with international ambitions, the answer is: sooner rather than later.</p>
+
+    <h2>What to look for in a translator</h2>
+
+    <p>Not all translation is the same, and the differences matter enormously. Someone trained in literary translation works with prose — with sentences designed to be read. A screenplay translator works with dialogue designed to be performed, and action lines designed to be storyboarded. The skills overlap, but they're not the same discipline.</p>
+
+    <p>The best screenplay translators are either screenwriters themselves, or have spent enough time working with scripts — in production, in adaptation, in script editing — that they understand what the page is actually asking for. They know that "she hesitates" and "she stops" are not the same instruction to a director. They know that two extra syllables in a line of dialogue can break a scene's rhythm completely.</p>
+
+    <p>Ask to see samples. Ask what their process is. Ask if they've worked on produced material. A good translator treats your script as a live document, not a text to be processed.</p>
+
+    <p>Your story deserves to be read the way you wrote it. An English translation doesn't change what the story is. It changes who gets to encounter it.</p>
+
+  </article>
+
+  <div class="divider"></div>
+
+  <footer>
+    <p>&copy; 2026 Djamel Bennecib</p>
+    <a href="index.html#essays">← Back to Essays</a>
+  </footer>
+
+</body>
+</html>

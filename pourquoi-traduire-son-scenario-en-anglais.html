@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pourquoi traduire son scénario en anglais — Djamel Bennecib</title>
+  <meta name="description" content="L'anglais n'est pas seulement la langue dominante du cinéma. C'est le système d'exploitation de l'industrie. Si votre scénario n'est pas en anglais, il n'est pas vraiment dans la pièce."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --bg2: #111;
+      --bg3: #161616;
+      --text: #e8e8e8;
+      --text-muted: #777;
+      --text-dim: #555;
+      --red: #c0392b;
+      --red-light: #e74c3c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, serif;
+      line-height: 1.9;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10,10,10,0.95);
+      border-bottom: 1px solid #1a1a1a;
+      padding: 1.2rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--text);
+      text-decoration: none;
+    }
+    .nav-back {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.75rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--text-muted);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--red-light); }
+
+    .hero {
+      padding: 12rem 4rem 6rem;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .hero-tag {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.35em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 2rem; display: block;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    .hero-meta {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--text-dim);
+    }
+    .lang-switch {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem; letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-decoration: none;
+      border-bottom: 1px solid #333;
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .lang-switch:hover { color: var(--red-light); border-color: var(--red-light); }
+
+    .divider {
+      max-width: 780px; margin: 0 auto;
+      padding: 0 4rem;
+      border-top: 1px solid #1e1e1e;
+    }
+
+    .body-text {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 4rem 8rem;
+    }
+    .body-text p {
+      font-size: 1.08rem;
+      color: #ccc;
+      margin-bottom: 1.8rem;
+    }
+    .body-text p:first-child {
+      font-size: 1.2rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .body-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-style: italic;
+      color: #fff;
+      margin: 3.5rem 0 1.5rem;
+    }
+    .pull-quote {
+      border-left: 2px solid var(--red);
+      padding: 0.5rem 0 0.5rem 2rem;
+      margin: 3rem 0;
+    }
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem !important;
+      font-style: italic;
+      color: #e0e0e0 !important;
+      line-height: 1.7;
+      margin: 0 !important;
+    }
+
+    footer {
+      border-top: 1px solid #1a1a1a;
+      padding: 3rem 4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 780px; margin: 0 auto;
+    }
+    footer p {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--text-dim);
+    }
+    footer a {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--red);
+      text-decoration: none; transition: color 0.2s;
+    }
+    footer a:hover { color: var(--red-light); }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero { padding: 9rem 1.5rem 4rem; }
+      .body-text { padding: 3rem 1.5rem 6rem; }
+      .divider { padding: 0 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Djamel Bennecib</a>
+    <a href="index.html#essays" class="nav-back">← Tous les articles</a>
+  </nav>
+
+  <section class="hero">
+    <span class="hero-tag">Traduction de scénario</span>
+    <h1>Pourquoi traduire son scénario en anglais</h1>
+    <p class="hero-meta">Par Djamel Bennecib &nbsp;/&nbsp; 2026</p>
+    <a href="why-translate-your-screenplay-into-english.html" class="lang-switch">Read in English →</a>
+  </section>
+
+  <div class="divider"></div>
+
+  <article class="body-text">
+
+    <p>L'anglais n'est pas seulement la langue dominante du cinéma. C'est le système d'exploitation de l'industrie. Si votre scénario n'est pas en anglais, il n'est pas vraiment dans la pièce.</p>
+
+    <p>C'est abrupt, mais c'est ainsi que fonctionne le marché. Les producteurs, les agents de vente, les programmateurs de festivals, les partenaires de coproduction — la plupart lisent en anglais. Certains lisent uniquement en anglais. Quand ils reçoivent un scénario en français, en espagnol ou en coréen, leur premier réflexe est de demander un coverage. Et un coverage n'est pas votre scénario. C'est un résumé. C'est un filtre. Et les filtres laissent des choses de côté.</p>
+
+    <p>La question n'est donc pas de savoir s'il faut traduire. La question est de mesurer ce qu'on perd si on ne le fait pas.</p>
+
+    <h2>Le pitch commence avant la réunion</h2>
+
+    <p>La plupart des coproductions internationales ne démarrent pas par un appel téléphonique, mais par une lecture. Quelqu'un, dans un marché — Cannes, l'AFM, Berlin — prend un scénario. Il le lit dans un avion ou dans une chambre d'hôtel à minuit. Si c'est dans une langue qu'il ne maîtrise pas parfaitement, il ne le lit pas du tout. Il le confie à un assistant, ou il le repose.</p>
+
+    <p>Le pitch a lieu quand quelqu'un lit vos dix premières pages seul, à son rythme, sans personne pour expliquer le contexte ou le ton. Si ces dix pages ne sont pas dans une langue qu'il peut absorber pleinement, vous avez déjà perdu la pièce. Non pas parce que votre histoire n'est pas forte. Parce que la friction était trop haute.</p>
+
+    <p>Une traduction anglaise supprime cette friction. Elle met votre scénario sur un pied d'égalité avec tous les autres dans la pile.</p>
+
+    <h2>Traduire n'est pas transcrire</h2>
+
+    <p>C'est là que la plupart des auteurs se trompent. Ils imaginent que la traduction est une tâche technique: on confie le scénario à quelqu'un de bilingue, on récupère la même histoire dans d'autres mots. Ce n'est pas ce qui se passe. Loin de là.</p>
+
+    <p>Un scénario n'est pas un roman. C'est un document de jeu. Chaque réplique est écrite pour être dite, chaque scène pour être filmée. Cela signifie qu'un traducteur ne peut pas se contenter d'être bilingue. Il doit comprendre comment les scénarios en anglais sonnent réellement — le rythme des dialogues, la compression des didascalies, la façon très précise dont l'anglais américain traite le sous-texte. Une traduction techniquement exacte peut paraître totalement plate sur la page. Suffisamment plate pour tuer un vrai projet.</p>
+
+    <div class="pull-quote">
+      <p>L'objectif n'est pas des mots en anglais. L'objectif, c'est de l'énergie en anglais.</p>
+    </div>
+
+    <p>Ce qu'il faut, c'est quelqu'un capable de faire sentir que le scénario a été écrit en anglais dès le départ. Pas adapté, pas traduit. Écrit. Cela exige deux choses: une maîtrise profonde des deux langues, et l'oreille d'un scénariste pour la façon dont le dialogue existe sur la page.</p>
+
+    <h2>Votre voix doit traverser le passage</h2>
+
+    <p>Voilà ce qui disparaît dans une mauvaise traduction: la spécificité. Ce qui fait que votre scénario est le vôtre. La façon particulière qu'a un personnage de parler. Le rythme d'une scène qui fait trois choses à la fois. La texture d'un monde qui ne se traduit pas littéralement parce qu'il n'en a pas besoin — il lui suffit d'atterrir.</p>
+
+    <p>Un auteur français avec lequel j'ai travaillé avait un personnage dont la façon de parler était elliptique, presque bureaucratique, même dans les scènes intimes. C'était un choix délibéré qui disait tout sur ce personnage. Une traduction mot à mot en avait fait de la maladresse. Une adaptation qui comprenait l'intention en avait fait quelque chose qu'un acteur américain pouvait jouer immédiatement.</p>
+
+    <p>La voix avait traversé le passage. C'est à ça que sert la traduction.</p>
+
+    <h2>Les festivals lisent autrement que les producteurs</h2>
+
+    <p>Une distinction pratique mérite d'être posée. Si vous ciblez des fonds de coproduction européens ou soumettez à des festivals dans votre propre territoire linguistique, la traduction n'est peut-être pas la priorité. Beaucoup de ces lecteurs sont multilingues, et le contexte aide.</p>
+
+    <p>Mais si vous soumettez à des concours comme le Nicholl, que vous pitchez dans un marché américain, que vous approchez un agent de vente international, ou que vous essayez de toucher une société de production au Royaume-Uni, en Australie ou aux États-Unis — un scénario en anglais n'est pas optionnel. C'est la condition d'entrée. Certains concours refusent simplement les soumissions dans une autre langue. Certains agents de vente ne transmettent pas votre scénario en interne s'il n'est pas déjà en anglais. L'infrastructure tourne en anglais.</p>
+
+    <p>Savoir quelles portes l'exigent et lesquelles non fait partie d'une stratégie. Mais pour la plupart des auteurs avec des ambitions internationales, la réponse est: le plus tôt possible.</p>
+
+    <h2>Ce qu'il faut chercher chez un traducteur</h2>
+
+    <p>Toutes les traductions ne se valent pas, et les différences comptent énormément. Quelqu'un formé à la traduction littéraire travaille avec de la prose — des phrases conçues pour être lues. Un traducteur de scénarios travaille avec des dialogues conçus pour être joués, et des didascalies conçues pour être storyboardées. Les compétences se recoupent, mais ce ne sont pas les mêmes disciplines.</p>
+
+    <p>Les meilleurs traducteurs de scénarios sont soit des scénaristes eux-mêmes, soit des personnes qui ont passé suffisamment de temps à travailler avec des scripts — en production, en adaptation, en script editing — pour comprendre ce que la page demande réellement. Ils savent que "elle hésite" et "elle s'arrête" ne sont pas la même instruction pour un réalisateur. Ils savent que deux syllabes de trop dans une réplique peuvent briser entièrement le rythme d'une scène.</p>
+
+    <p>Demandez des échantillons. Demandez quelle est leur méthode. Demandez s'ils ont travaillé sur du matériel produit. Un bon traducteur traite votre scénario comme un document vivant, pas comme un texte à traiter.</p>
+
+    <p>Votre histoire mérite d'être lue comme vous l'avez écrite. Une traduction anglaise ne change pas ce qu'est l'histoire. Elle change qui peut la rencontrer.</p>
+
+  </article>
+
+  <div class="divider"></div>
+
+  <footer>
+    <p>&copy; 2026 Djamel Bennecib</p>
+    <a href="index.html#essays">← Retour aux articles</a>
+  </footer>
+
+</body>
+</html>
